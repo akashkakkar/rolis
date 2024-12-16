@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // other configurations...
+  images: {
+    unoptimized: true,
+  }
 }
 
 module.exports = nextConfig
-
