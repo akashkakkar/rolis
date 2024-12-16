@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <Image
               src="/images/logo-white.png"
-              alt="Roli's Boutique"
+              alt="Roli&apos;s Boutique"
               width={120}
               height={50}
               className="mb-4"
@@ -87,7 +87,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8 text-center text-gray-300">
-          <p>&copy; {new Date().getFullYear()} Roli's Boutique. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Roli&apos;s Boutique. All rights reserved.</p>
         </div>
       </div>
     </footer>

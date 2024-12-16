@@ -20,7 +20,7 @@ export function Hero() {
             Bespoke Tailoring & Premium Fabrics
           </h1>
           <p className="text-lg md:text-xl mb-8 text-gray-200">
-            Experience the art of custom tailoring and discover our exquisite collection of fabrics at Roli's Boutique
+            Experience the art of custom tailoring and discover our exquisite collection of fabrics at Roli&apos;s Boutique
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
