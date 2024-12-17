@@ -31,6 +31,10 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: out
+      - name: Debug asset paths
+        run: |
+          echo "Contents of out directory:"
+          find out -type f
   deploy:
     needs: build
     runs-on: ubuntu-latest

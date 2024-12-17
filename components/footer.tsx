@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <Image
-              src="/images/logo-white.png"
+              src="/rolis/images/logo-white.png"
               alt="Roli&apos;s Boutique"
               width={120}
               height={50}

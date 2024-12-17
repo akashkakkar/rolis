@@ -14,7 +14,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.png"
+              src="/rolis/images/logo.png"
               alt="Roli's Boutique"
               width={120}
               height={50}
