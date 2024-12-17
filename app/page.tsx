@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import { Hero } from '@/components/hero'
 import { Services } from '@/components/services'
 import { About } from '@/components/about'
@@ -14,7 +14,7 @@ export default function Home() {
       <Gallery />
       <Contact />
       <div className="flex justify-center space-x-4 my-8">
-        <Image
+        {/*<Image
           src="/rolis/next.svg"
           alt="Next.js Logo"
           width={180}
@@ -27,7 +27,7 @@ export default function Home() {
           width={180}
           height={37}
           priority
-        />
+        />*/}
       </div>
     </div>
   )
