@@ -15,14 +15,14 @@ export default function Home() {
       <Contact />
       <div className="flex justify-center space-x-4 my-8">
         <Image
-          src="/next.svg"
+          src="/rolis/next.svg"
           alt="Next.js Logo"
           width={180}
           height={37}
           priority
         />
         <Image
-          src="/vercel.svg"
+          src="/rolis/vercel.svg"
           alt="Vercel Logo"
           width={180}
           height={37}

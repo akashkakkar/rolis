@@ -9,7 +9,13 @@ const nextConfig = {
     unoptimized: true,
     loader: 'akamai',
     path: ''
+  },
+  experimental: {
+    appDir: true,
+    serverComponentsExternalPackages: []
   }
 }
 
 module.exports = nextConfig
+
+

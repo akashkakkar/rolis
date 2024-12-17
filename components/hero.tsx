@@ -9,7 +9,7 @@ export function Hero() {
         loop 
         muted 
         playsInline
-        poster="/images/hero-bg.jpg"
+        poster="/rolis/images/hero-bg.jpg"
       >
         <source src="/rolis/videos/hero-bg.mp4" type="video/mp4" />
         Your browser does not support the video tag.
