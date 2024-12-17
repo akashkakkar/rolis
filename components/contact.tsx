@@ -27,35 +27,27 @@ export function Contact() {
     setFormStatus('submitting')
 
     try {
-      const response = await fetch(LAMBDA_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
+        const res = await fetch('YOUR_LAMBDA_URL', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            mode: 'cors',
+            body: JSON.stringify(formData),
+        })
 
-      if (!response.ok) {
-        throw new Error('Failed to send message')
-      }
-
-      setFormStatus('submitted')
-      setFormData({ name: '', email: '', phone: '', message: '' })
-
-      // Reset form status after 3 seconds
-      setTimeout(() => {
-        setFormStatus('idle')
-      }, 3000)
+        if (!res.ok) throw new Error('Failed to send message')
+        
+        setFormStatus('submitted')
+        setFormData({ name: '', email: '', phone: '', message: '' })
+        
+        setTimeout(() => setFormStatus('idle'), 3000)
     } catch (error) {
-      console.error('Error:', error)
-      setFormStatus('error')
-      
-      // Reset error status after 3 seconds
-      setTimeout(() => {
-        setFormStatus('idle')
-      }, 3000)
+        console.error('Error:', error)
+        setFormStatus('error')
+        setTimeout(() => setFormStatus('idle'), 3000)
     }
-  }
+}
 
   return (
     <section id="contact" className="py-20 bg-white">
@@ -189,6 +181,11 @@ export function Contact() {
     </section>
   )
 }
+
+
+
+
+
 // 'use client'
 
 // import { useState } from 'react'
