@@ -98,7 +98,7 @@ export default function Contact() {
                >
                  <Instagram className="w-6 h-6" />
                </a>
-               
+               <a
                  href="https://business.facebook.com/settings/people/61570570773168"
                  target="_blank"
                  rel="noopener noreferrer"
@@ -182,3 +182,4 @@ export default function Contact() {
    </section>
  )
 }
+
