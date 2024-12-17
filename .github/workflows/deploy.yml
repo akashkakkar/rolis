@@ -22,6 +22,7 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+             mkdir -p out
       - name: Copy public assets
         run: |
           cp -r public/* out/
@@ -43,3 +44,5 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/deploy-pages@v2
+
+
