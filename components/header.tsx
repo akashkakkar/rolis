@@ -16,9 +16,9 @@ export function Header() {
             <Image
               src="/images/logo.png"
               alt="Roli's Boutique"
-              width={120}
-              height={50}
-              className="h-12 w-auto"
+              width={200}
+              height={60}
+              className="h-16 w-auto"
             />
           </Link>
 
