@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/rolis',
-  assetPrefix: '/rolis',
   trailingSlash: true,
   distDir: 'out',
   images: {
@@ -11,4 +9,4 @@ const nextConfig = {
   serverExternalPackages: []
 }
 
-module.exports = nextConfig
+
