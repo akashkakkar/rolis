@@ -19,36 +19,34 @@ export default function Contact() {
    const { name, value } = e.target
    setFormData(prevState => ({ ...prevState, [name]: value }))
  }
-
  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-   e.preventDefault()
-   setFormStatus('submitting')
+  e.preventDefault()
+  setFormStatus('submitting')
 
-   try {
-     const res = await fetch('https://f33j4xjsdery2wlq2ti2bzs5xq0tfykm.lambda-url.ap-south-1.on.aws/', {
-       method: 'POST',
-       headers: {
-         'Content-Type': 'application/json',
-       },
-       mode: 'cors',
-       body: JSON.stringify(formData),
-     })
+  try {
+    const res = await fetch('https://f33j4xjsdery2wlq2ti2bzs5xq0tfykm.lambda-url.ap-south-1.on.aws/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      mode: 'cors',
+      body: JSON.stringify(formData),
+    })
 
-     const data = await res.json()
-     
-     if (res.status === 200) {
-       setFormStatus('submitted')
-       setFormData({ name: '', email: '', phone: '', message: '' })
-       setTimeout(() => setFormStatus('idle'), 3000)
-     } else {
-       throw new Error(data.error || 'Failed to send message')
-     }
-   } catch (error) {
-     console.error('Error:', error)
-     setFormStatus('error')
-     setTimeout(() => setFormStatus('idle'), 3000)
-   }
- }
+    if (!res.ok) {
+      throw new Error('Network response was not ok')
+    }
+
+    setFormStatus('submitted')
+    setFormData({ name: '', email: '', phone: '', message: '' })
+    setTimeout(() => setFormStatus('idle'), 3000)
+  } catch (error) {
+    console.error('Error:', error)
+    setFormStatus('error')
+    setTimeout(() => setFormStatus('idle'), 3000)
+  }
+}
+ 
 
  return (
    <section id="contact" className="py-20 bg-white">
