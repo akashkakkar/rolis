@@ -8,7 +8,7 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[500px]">
             <Image
-              src="/rolis/images/about-image.jpg"
+              src="/images/about-image.jpg"
               alt="Roli&apos;s Boutique Workshop"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

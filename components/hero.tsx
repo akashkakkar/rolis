@@ -9,9 +9,9 @@ export function Hero() {
         loop 
         muted 
         playsInline
-        poster="/rolis/images/hero-bg.jpg"
+        poster="/images/hero-bg.jpg"
       >
-        <source src="/rolis/videos/hero-bg.mp4" type="video/mp4" />
+        <source src="/videos/hero-bg.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="container mx-auto px-4 relative z-10">
