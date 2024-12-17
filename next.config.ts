@@ -1,13 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: 'static',  // Changed from 'export'
   basePath: '/rolis',
   assetPrefix: '/rolis',
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-    loader: 'static'
-  }
+  images: { unoptimized: true },
+  distDir: 'dist'    // Specify output directory
 }
 
 module.exports = nextConfig
