@@ -27,7 +27,7 @@ export function Contact() {
     setFormStatus('submitting')
 
     try {
-        const res = await fetch('YOUR_LAMBDA_URL', {
+        const res = await fetch('https://f33j4xjsdery2wlq2ti2bzs5xq0tfykm.lambda-url.ap-south-1.on.aws/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
